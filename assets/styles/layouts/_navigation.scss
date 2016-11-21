@@ -1,0 +1,230 @@
+/*
+ * NAVIGATION
+ *********************************************/
+/* DEFAULT STYLES*/
+section.primary-nav-wrap{ 
+	padding-top: 150px;
+}
+
+
+
+
+/*
+ * NAVIGATION 
+ *********************************************/
+header#navigation{
+	nav.navbar-custom{
+		border-top: 3px solid $brand-primary-dark;
+
+		.container.navbar-seo{
+			height: 40px;
+			padding: 0;
+		    overflow: hidden;
+			background:$brand-secondary-dark;
+			@include transition( ease height .4s);
+
+			.seo-wrap{
+				.navbar-left{
+					padding-top: 7px;
+
+					span.phone{
+						padding-left: 15px;
+						font-size: 16px;
+						color:$brand-primary;
+
+						i.fa{}
+						strong{}
+					}
+				}
+				.social{
+					a{
+						i.fa{
+						    display: inline-block;
+						    text-align: center;
+						    width: 41px;
+						    height: 41px;
+						    line-height: 41px;
+						    font-size: 20px;
+							background: $brand-secondary-transparent;
+							@include transition( ease all .4s);
+						}
+					}
+					a:hover{
+						text-decoration: none;
+
+						i{
+							background: $brand-secondary-dark;
+						}
+					}
+				}
+			}
+		}
+		.container.primary{
+			position: relative;
+			background:$brand-secondary;
+			padding-top:10px;
+			padding-bottom:10px;
+			box-shadow: 0px 5px 5px -5px #000;
+			@include transition( ease padding .4s);
+
+			.nav-wrap{
+				.navbar-header{
+					width:100%;
+
+					a.navbar-logo{
+						float: left;
+
+						img{
+							max-width:250px;
+							padding: 8px 0;
+							@include transition( ease all .4s);
+						}
+					}
+					a.navbar-brand{}
+
+					/** UBERMENU STYLES **/
+					a.ubermenu-responsive-toggle{}
+					nav.ubermenu-main{
+						font-family: $sans-serif;	
+						ul.ubermenu-nav{
+							li.ubermenu-item-level-0{
+								>a,>span{
+									font-weight: $sans-serif-500;
+									color: $brand-primary;
+								}
+								a,span{
+									font-size: 14px !important;
+								}
+								ul.ubermenu-submenu{
+									background-color: rgba(6,42,71,.919) !important;
+
+									li.ubermenu-has-submenu-stack{
+										border-left: 1px solid $brand-secondary;
+
+										&:first-child{
+											border-left: none;
+										}
+									}
+									li.ubermenu-item-level-1{
+
+										>a{
+											font-weight: $sans-serif-500;
+										}
+										a{
+											color: $brand-secondary;
+										}
+										ul.ubermenu-submenu{
+											li.ubermenu-item-level-2{
+												a{
+													font-weight: $sans-serif-300;
+												}
+											}
+										}
+									}
+									li.ubermenu-retractor-mobile{
+										border-top: 1px solid $brand-complimentary;
+										color: $brand-complimentary;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+footer.content-info {
+	nav.ubermenu{
+		font-family: $sans-serif;
+		font-weight: $sans-serif-500;
+
+		li{
+			font-size: 1em;
+		}
+	}
+}
+
+
+/*
+ * NAVIGATION MEDIA QUERIES
+ *********************************************/
+ 
+@media screen and (max-width:991px) {
+
+	header#navigation{
+		nav.navbar-custom{
+			.container.primary{
+				max-height: 350px;
+				overflow: scroll;
+
+				.nav-wrap{
+					.navbar-header{
+
+						/** UBERMENU STYLES **/
+						a.ubermenu-responsive-toggle{
+							color: $brand-primary;
+							display: inline-block;
+							border: 1px solid $brand-primary;
+							border-radius: 5px;
+							margin-top: 5px;
+							padding: 10px;
+							float: right;
+						}
+						a.ubermenu-responsive-toggle-open{
+							background-color: $brand-primary;
+							border-color: $brand-secondary;
+
+							i.fa.fa-bars{
+								color: $brand-secondary;
+							}
+						}
+						nav.ubermenu-main{
+							ul.ubermenu-nav{
+								li.ubermenu-item-level-0{
+									ul.ubermenu-submenu{
+										li.ubermenu-has-submenu-stack{
+											border-left: none;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+}
+
+@media screen and (max-width:768px){
+
+	section.primary-nav-wrap{
+		padding-top: 80px;
+	}
+	header#navigation{
+		nav.navbar-custom{
+			.container.primary{
+				.nav-wrap{
+					.navbar-header{
+						a.navbar-logo{
+							img{
+								max-width:220px;
+								padding: 8px 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width:480px){
+
+}	

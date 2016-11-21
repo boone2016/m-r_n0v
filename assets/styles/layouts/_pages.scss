@@ -1,0 +1,293 @@
+/**
+ **
+ ** PAGE LISTS
+ **********************************************
+ **********************************************
+ **
+ **
+ **	1. Home Page
+ **	2. Employee Page
+ **		- Single Employee
+ **	3. Search Page
+ **	4. Blog Roll Page
+ **	5. Footer Pagination
+ ** 6. Landing Pages
+ **		- 
+ **		- 
+ **
+ **
+ **********************************************
+***********************************************/
+
+
+
+
+
+
+/*
+ * 1. Home Page
+ ********************************************/
+
+
+
+
+
+
+/*
+ * 2. Employee Page 
+ ********************************************/
+.page-template-template-employees{
+	.department{
+		.department-title{
+			padding-top: 1em;
+			padding-bottom: 1em;
+		}
+		figure.employee-item{
+
+			.employee-anchor{
+				.bg-img {
+					height: 300px;
+					width: 100%;
+					max-width: 300px;
+					margin: 0 auto;	
+				}
+			}
+			figcaption{
+				text-align: center;
+				color: $brand-text-primary;
+				margin-bottom: 2em;
+
+				.employee-name{
+					margin-top: 1em;
+					margin-bottom: 1em;
+				}
+			}
+		}
+	}
+	.executive {
+		figure.employee-item{
+			.employee-anchor{
+				.bg-img {
+					height: 350px;
+				}
+			}
+		}	
+	}
+	.executive,
+	.client-services,
+	.admissions{
+		background: #e3e3e3;
+	}
+}
+/* SINGLE EMPLOYEE */
+.single-employee{
+	span#breadcrumbs{
+		display: none;
+	}
+}
+
+
+
+
+
+
+/*
+ * 3. Search Page
+ ********************************************/
+.search-results{
+	.search-excerpt{
+		article{
+			border-bottom: 3px solid #e3e3e3;			
+		}
+		&:last-of-type{
+			article{
+				border-bottom: none;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+/*
+ * 4. Blog Roll Page
+ ********************************************/
+article.blog-roll-item{
+	figure.blog-item{
+		position: relative;
+
+		a.blog-anchor{
+			.bg-img{
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+
+			figcaption{
+				position: relative;
+				z-index: 2;
+				blog-title{
+					span{}
+				}
+				.border{}
+				.blog-meta
+					em{}
+				}
+			}
+		}
+	}
+	.entry-summary{
+		.post-edit-link{}
+		.excerpt{}
+	}
+}
+
+
+
+
+/*
+ * 5. Footer Pagination
+ ********************************************/
+ footer.paginate{
+	 padding-bottom: 1em;
+
+	.navigation.posts-navigation{
+		padding-top: 1em;
+		padding-bottom: 1em;
+		border-top: 3px solid $brand-complimentary;
+
+		.col-xs-6{
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+		.nav-next,
+		.nav-previous{
+			.col-sm-6{
+				span{
+					color:$brand-complimentary;
+
+					&:hover{
+						color: $brand-primary;
+					}
+				}
+			}
+		}
+		.nav-next{
+			.col-sm-6{
+				padding-right: 0;
+			}
+		}
+		.nav-previous{
+			.col-sm-6{
+				padding-left: 0;
+			}
+		}
+	}
+}
+
+
+
+
+/*
+ * 6. Landing Pages
+ ********************************************/
+ 
+.page-template-template-landing-page-v3-no-nav-no-footer{
+	section#cta{
+		padding-top: 0px !important;
+		.container.primary{
+			display: none !important;	
+		}
+		.container.navbar-seo{
+			display: none !important;	
+		}			
+	}
+	div#foot-top{
+		display: none !important;	
+	}
+	#breadcrumbs{
+		display: none;	
+	}
+	h5.checklist{
+		line-height: 60px;
+		margin-top: 0;	
+	}
+	.border-list{
+		border: 2px solid #ffa700;
+		border-radius: 25px;	
+	}
+	.yoast_breadcrumb{
+		padding-top: 0;	
+	}							
+} 	 
+ 
+.page-template-template-landing-page-v2-0{	
+	hr{border: 1px solid #ffa700;}
+	h4{line-height: 45px;}	
+	p,ol{
+		line-height: 2em !important;
+	}
+	ul{
+		hr{
+			border: 1px solid #062a47;	
+		}		
+	}
+	a:hover{color:#ffa700;}							
+	.text-ovals-landing{padding: 39px !important;}
+	.text-ovals-variant,.text-circles-landing{padding: 70px !important;}
+	.text-ovals-variant,.text-circles-landing,.text-ovals-landing{
+		border: 3px solid #faa700 !important;
+		border-radius:100% !important;
+		text-align:center !important;			
+	}		
+	.visible-md{
+		.fa-check-square-o{
+			color:$brand-complimentary;	
+		}
+		h5{
+			color:$brand-primary;	
+		}			
+	}				
+	blockquote{
+		border: 3px solid #ffa700;
+		&:before,
+		&:after {
+			color: #ffa700;
+		}		
+		small{
+			color:#fff !important;	
+		}			
+	}									
+}
+
+@media screen and (max-width:768px){
+	.page-template-template-landing-page-v2-0{
+		.img-responsive{
+			max-width: 60%;	
+		}
+	}
+	.page-template-template-landing-page-v3-no-nav-no-footer{
+		h5.checklist{
+			line-height: 40px;	
+		}		
+	}					
+}	
+@media screen and (max-width:480px){
+	.page-template-template-landing-page-v2-0{
+		.modal{text-align: center !important;}	
+		.img-responsive{
+			max-width: 100% !important; 	
+		}
+		section#cta{
+			padding-top:25px;	
+		}
+		.header-cta{
+			padding-bottom: 0px !important;	
+		}						
+	}					
+}	 	 
+

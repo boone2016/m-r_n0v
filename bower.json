@@ -1,0 +1,40 @@
+{
+  "name": "sage",
+  "homepage": "https://roots.io/sage/",
+  "authors": [
+    "Ben Word <ben@benword.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "3.3.6",
+    "font-awesome": "fontawesome#^4.6.3",
+    "matchHeight": "matchheight#^0.7.0",
+    "scrollmagic": "^2.0.5",
+    "gsap": "greensock#^1.19.0",
+    "slider-pro": "^1.2.2"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "./assets/stylesheets/_bootstrap.scss",
+        "./assets/javascripts/bootstrap/transition.js",
+        "./assets/javascripts/bootstrap/alert.js",
+        "./assets/javascripts/bootstrap/button.js",
+        "./assets/javascripts/bootstrap/collapse.js",
+        "./assets/javascripts/bootstrap/modal.js"
+      ]
+    },
+    "gsap": {
+      "main": [
+        "./src/minified/TweenMax.min.js"
+      ]
+    },
+    "scrollmagic": {
+      "main": [
+        "./scrollmagic/minified/ScrollMagic.min.js",
+        "./scrollmagic/minified/plugins/animation.gsap.min.js"
+      ]
+    }
+  }
+}

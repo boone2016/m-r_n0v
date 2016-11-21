@@ -1,0 +1,685 @@
+/**
+ **
+ ** ADVANCED CUSTOM FIELDS SECTIONS
+ **********************************************
+ **********************************************
+ **
+ **
+ **	1.  Default Styles
+ **	2.  Section Title
+ **	3.  3-box Section Layout Section
+ **			- Content Half Half
+ **			- Icon Left Content Right
+ **			- Content Right Icon Left
+ **	4.  Blog Post Layout Section
+ **	5.  Page List Links Section
+ **	6.  Page Excerpts Links Section
+ **	7.  CTA Section
+ **	8.  Columns Section
+ **	9.  Google Map
+ **	10. Media Queries
+ **
+ **
+ **********************************************
+***********************************************/
+
+
+
+
+
+
+/**
+ ** 1.  Default Styles
+***********************************************/
+section.page-links,
+.text-section{
+	padding: 30px 0;
+}
+section.page-preview-box{
+	padding: 60px 0 30px;
+}
+
+section.section-title{}
+section.page-preview-box{}
+.box-layout{}
+section.page-links{}
+section.entry-content{}
+
+
+
+
+
+
+/**
+ ** 2. Section Title
+***********************************************/
+section.section-title{
+	padding: 1em 0;
+
+	.container{
+		.row{
+			.col-xs-12{
+				.icon-wrap{}
+				img.section-icon{
+					max-height: 100px;
+					max-width: 100px;
+				}
+				.icon-wrap{
+					margin-top: 1em;
+				}
+				i.img-icon{}
+				.title{
+					color:#fff;
+					margin-bottom:20px;
+				}
+				p{
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+/*
+ * 3.  3-box Section Layout Section
+ *********************************************/
+.box-layout{
+	figure.box-item{
+		height: 500px;
+		position:relative;
+		text-align: center;
+		overflow: hidden;
+		background-size: cover;
+		@include transition( ease all .4s);
+
+		.bg-img,
+		a.box-anchor{
+			position: absolute;
+			height:100%;
+			width: 100%;
+			top:0;
+			left:0;
+		}
+		.bg-img{
+			@include transition( ease all .4s);
+		}
+		a.box-anchor{
+			background: transparent;
+			@include transition( ease all .4s);
+			text-decoration: none;
+			color:#fff;
+			padding: 1em;
+
+			figcaption{
+				.rollover {
+					p{
+						color:#fff !important;	
+					}
+				}	
+				.box-title {
+					color:#fff !important;	
+				}	
+				.box-title,
+				.img-icon,
+				.icon-title,
+				.rollover{
+					position: absolute;
+					right: 30px;
+					left: 30px;
+					padding: 10px 0;
+					@include transition( ease all .4s);
+				}
+				.box-title,
+				.fa.img-icon,
+				img.img-icon,
+				.icon-title{
+					-webkit-transform: translate3d(0,20px,0);
+					transform: translate3d(0,20px,0);
+				}
+				.box-title,
+				.img-icon,
+				.icon-title{
+					line-height: 1.45em !important;
+					font-weight: $sans-serif-300;
+				}
+				.img-icon{
+					margin: 0 auto;
+				}
+				.fa.img-icon{
+					top: 10%;
+					font-size:160px;
+				}
+				img.img-icon{
+					top: 20%;
+					max-height: 160px;
+					max-width: 160px;
+				}
+				.box-title{
+					top:35%;
+					text-decoration: none;
+
+					span{
+						padding: 5px 10px;
+						background: $brand-primary-transparent;
+						@include transition( ease all .4s);
+					}
+				}
+				.icon-title{
+					top:50%;
+				}
+				.rollover{
+					top:60%;
+					opacity: 0;
+					-webkit-transform: translate3d(0,100%,0);
+					transform: translate3d(0,100%,0);
+
+					span.border{}
+					em{
+						p{}
+					}
+				}
+			}
+		}
+		&:hover{
+			background-size: 110%!important;
+
+			a.box-anchor{
+				background: $brand-primary-transparent;
+
+				figcaption{
+					.box-title{
+						span{
+							color: $brand-primary !important;
+							background:$brand-secondary-transparent !important;
+						}
+					}
+					.rollover{
+						opacity: 1;
+					}
+					.img-icon,
+					.icon-title,
+					.box-title,
+					.rollover{
+						-webkit-transform: translate3d(0,0,0);
+						transform: translate3d(0,0,0);
+					}
+				}
+			}
+			.bg-img{
+				-moz-transform: scale(1.1,1.1);
+				-webkit-transform: scale(1.1,1.1);
+				transform: scale(1.1,1.1);
+			}
+		}
+	}
+}
+
+
+
+
+
+
+/**
+ ** 4.  Blog Post Layout Section
+***********************************************/
+figure.blog-item{
+	position:relative;
+	text-align: center;
+	overflow: hidden;
+
+	a.blog-anchor{
+		background: transparent;
+		@include transition( ease all .4s);
+		text-decoration: none;
+		color:#fff;
+		padding: 1em;
+
+		.bg-img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			@include transition( ease all .4s);
+		}
+		figcaption{
+			padding-top: 10em;
+			position: relative;
+			top:15%;
+
+			.blog-title{
+				padding-bottom: 1em;
+				line-height: 1.5em;
+
+				span{
+					color: #fff;
+					padding:4px;
+					background: $brand-primary-transparent;
+					@include transition( ease all .4s);
+				}
+			}
+			span.border{}
+			p.blog-meta{
+				em{
+					color: #fff;
+					padding:2px;
+					background:$brand-primary-transparent;
+				}
+			}
+		}
+	}
+	&:hover{
+		a.blog-anchor{
+			background: $brand-primary-transparent;
+
+			.bg-img{
+				-moz-transform: scale(1.1,1.1);
+				-webkit-transform: scale(1.1,1.1);
+				transform: scale(1.1,1.1);
+			}
+			figcaption{
+				.blog-title{
+					span{
+						color: $brand-primary;
+						background:$brand-secondary-transparent;
+					}
+				}
+			}
+		}
+	}
+}
+.all-blog-section{
+	.button-wrap{
+		padding: 1.5em 0;
+	}
+}
+
+
+
+
+
+
+/**
+ ** 5.  Page List Links Section
+***********************************************/
+section.page-links{
+	a {
+		color:$brand-primary;
+	}
+	.container{
+		.row{
+			.box-item{
+				h5{
+					a.box-anchor{
+						text-decoration: none;
+
+						span{
+							background: #e3e3e3;
+							display: block;
+							padding: 10px;
+							@include transition( ease all .4s);
+						}
+					}
+					a.box-anchor:hover{
+						span{
+							background: $brand-secondary;
+							
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+/**
+ ** 6.  Page Excerpts Links Section
+***********************************************/
+section.page-preview-box{
+	a {
+		color:$brand-primary;
+	}
+	.container{
+		.page-box-layout{
+			.page-excerpt{
+				margin-bottom: 3em;
+
+				.page-box-anchor{
+					text-decoration: none;
+
+					.box{
+						padding-top: 15px;
+						padding-bottom: 15px;
+						border: 3px solid #ddd;
+						margin-bottom: 1em;
+						background: #fff;
+						p{
+							font-family: $sans-serif;
+							font-size: 1.2em;
+							text-align: center !important;
+							color: $brand-text-primary;
+							padding-left: 15px;
+							padding-right: 15px;
+						}	
+
+						.icon{
+							display: block;
+							margin-top: -2.5em;
+
+							.fa{
+								display: inline-block;
+								padding: 10px 20px;
+								color: $brand-secondary;
+							    background: $brand-primary; /*fallback*/
+							    background:
+							        linear-gradient(45deg,  transparent 5px, $brand-primary 5px),
+							        linear-gradient(135deg, transparent 5px, $brand-primary 5px),
+							        linear-gradient(225deg, transparent 5px, $brand-primary 5px),
+							        linear-gradient(315deg, transparent 5px, $brand-primary 5px);
+							    background-position: bottom left, top left, top right, bottom right;
+							    background-size:52% 52%;
+							    background-repeat:no-repeat;
+							    width: 80px;
+							}
+						}
+						.page-box-title{
+							margin-top: 20px;
+							margin-bottom: 20px;
+							padding: 5px;
+							background: transparent;
+							@include transition( ease all .4s);
+						}
+						span.border{
+							margin-top: 1em;
+							margin-bottom: 1em;
+						}
+						em{
+							display: block;
+							padding-right: 2em;
+							padding-left: 2em;
+						}
+					}
+					&:last-child,
+					&:nth-last-child(2){
+						margin-bottom: 0;
+					}
+					&:hover{
+						.box{
+							.page-box-title{
+								background: $brand-secondary;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+/**
+ ** 7.  CTA Section
+***********************************************/
+.text-section {
+	padding: 30px 0;
+
+	.head {
+		margin-top: 100px;
+	}
+	.sub-head {
+		margin-top: 5px;
+	}
+    .container {
+    	.row {
+			.col-sm-12 {
+				ul{}	
+				.launch-section {
+					padding: 20px 0; 
+				}
+				.launch-pad {
+					text-align: center;
+				}
+				p {
+			    	.border {
+						width: auto;
+						margin-top: 20px;
+					}    
+				}	
+			}
+		}
+	}
+}
+
+
+
+
+
+
+/**
+ ** 8.  Columns Section
+***********************************************/
+section.entry-content{
+	.column-title{
+		.row{
+			.title{
+				padding-top: 1.5em;	
+			}
+		}
+	}
+	.column-content{
+		padding-top: 1.5em;
+		padding-bottom: 1.5em;
+
+		.row{
+			.content{
+				padding-top: 1.5em;	
+				padding-bottom: 1.5em;
+				margin-bottom: 1em;
+
+				figure.col-item{
+					margin-bottom: 1em;
+
+					.img-anchor{
+						display: block;
+					    height: 200px;
+					    position: relative;
+					    max-width: 400px;
+					    margin: 0 auto 2em;
+					    overflow: hidden;
+
+					    .img-wrap{
+						    position: absolute;
+						    height: 100%;
+						    width: 100%;
+						    top: 0;
+							@include transition( ease all .4s);
+					    }
+					    &:hover{
+						    .img-wrap{
+								-moz-transform: scale(1.1,1.1);
+								-webkit-transform: scale(1.1,1.1);
+								transform: scale(1.1,1.1);
+							}	
+					    }
+					}
+					figcaption{
+						.box-title{
+							margin-bottom: 1em;
+						}
+						p{
+							font-family: $sans-serif;
+							font-size: 1.2em;
+						}
+					}
+				}
+			}
+		}
+	}
+}		
+
+
+
+
+
+
+/**
+ ** 9. Google Map Section
+***********************************************/
+.acf-map img {
+   max-width: inherit !important;
+}	
+
+
+
+
+
+
+/**
+ ** 10.  Media Queries
+***********************************************/
+@media screen and (max-width:1240px){
+}
+ 
+@media screen and (max-width:991px){
+
+	.box-layout{
+		figure.box-item{
+			height: 425px;
+
+			a.box-anchor{
+				figcaption{
+					.box-title{
+						top:20%;
+						text-decoration: none;
+					}
+					.fa.img-icon{
+						top: 10%;
+						font-size:100px;
+					}
+					img.img-icon{
+						top: 10%;
+						max-height: 160px;
+						max-width: 160px;
+					}
+					.icon-title{
+						top:50%;
+					}
+					.rollover{
+						top:55%;
+						opacity: 1;
+						-webkit-transform: translate3d(0,20%,0);
+						transform: translate3d(0,20%,0);
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+
+
+@media screen and (max-width: 767px){
+
+	figure.blog-item{
+		a.blog-anchor{
+			figcaption{
+				.blog-title{
+					padding-bottom: 1em;
+					line-height: 1.6em;
+	
+				}
+			}
+		}
+	}
+
+
+	.box-layout{
+		figure.box-item{
+			height: 350px;
+
+			a.box-anchor{
+				figcaption{
+					.box-title{
+						top:20%;
+						text-decoration: none;
+					}
+					.fa.img-icon{
+						top: 10%;
+						font-size:100px;
+					}
+					img.img-icon{
+						top: 10%;
+						max-height: 160px;
+						max-width: 160px;
+					}
+					.icon-title{
+						top:50%;
+					}
+					.rollover{
+						top:55%;
+						opacity: 1;
+						-webkit-transform: translate3d(0,20%,0);
+						transform: translate3d(0,20%,0);
+					}
+				}
+			}
+		}
+	}
+
+
+
+	section.page-preview-box{
+		.container{
+			.page-box-layout{
+				.page-excerpt{
+					max-width: 500px;
+					margin-bottom: 4em;
+					margin-right: auto;
+					margin-left: auto;
+	
+					&:nth-last-child(2){
+						margin-bottom: 4em;
+					}
+				}
+			}
+		}
+	}
+
+
+
+	section.entry-content{
+		.column-content{
+			.row{
+				.content{
+					figure.col-item{
+						max-width: 500px;
+						margin-left: auto;
+						margin-right: auto;
+					}
+				}
+			}
+		}
+	}		
+
+
+
+}
+
+
+@media screen and (max-width: 480px){
+}

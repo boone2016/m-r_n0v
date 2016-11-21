@@ -1,0 +1,405 @@
+// Search form
+.search-form {
+  @extend .form-inline;
+}
+.search-form label {
+  font-weight: normal;
+  @extend .form-group;
+}
+.search-form .search-field {
+  @extend .form-control;
+}
+.search-form .search-submit {
+  @extend .btn;
+  @extend .btn-default;
+}
+form,input,textarea,label,fieldset,
+legend,select,optgroup,option,
+button,datalist,keygen,output{
+	max-width: 100%;
+	outline: none;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+/* ERROR SPAN SPACING */
+
+div.error-view{
+	margin-bottom: 5px;	
+}	
+
+/*
+* CTM FORM IFRAME
+*********************************/
+
+.backdrop{
+	form{
+		background-color:transparent !important;			
+	}	
+}
+.col-sm-12.hidden-md.hidden-lg{
+	form{
+		label{
+			color:#062a47 !important;	
+		}		
+	}		
+}		
+	
+
+/*
+* MULTI-STEP FORM 
+********************************/
+
+#j-multistep{
+	padding: 25px;
+	.footer{
+		background-color: #eee;
+		margin: 20px 13px;	
+	}
+	.label{
+		color:#000,	
+	}			
+}	
+
+
+/*
+ * STICKY FORM 
+ ******************************/
+ #j-forms-sticky{
+	 background: transparent;	 
+	.header{
+		border: none;
+		box-shadow: none;
+		background: transparent;
+		margin-bottom: 0px;;
+	}
+	form{
+		background: transparent;	
+	}
+	.footer{
+		border: none;
+		box-shadow: none;
+		background: transparent;
+		padding:0px;	
+	}
+	.unit{
+		margin-bottom: 7px;	
+	}	
+	.primary-btn{
+		background-color: $brand-complimentary;
+		@include transition( ease all .4s); 
+		&:hover{
+			border:2px solid $brand-complimentary;
+			color: $brand-complimentary;
+			background-color: $brand-primary;	
+		}		
+	}	
+}	 
+	 
+
+.sticky-form{
+    width: 100%;
+    max-width: 300px;
+    position: fixed;
+    top: 20%;
+    right: 0;
+    color: #fff;
+    box-shadow: 2px 0 14px -1px #000;
+    z-index: 1000;
+
+    .form-tab{
+        .title{
+             position: absolute;
+             right: 264px;
+             top: 52px;
+             display: block;
+             padding: 1em 1.5em 1em;
+             white-space: nowrap;
+             background: #ffa700;
+             transform: rotate(-90deg);
+             z-index: 9;
+             color: #fff;
+             letter-spacing: 1px;
+             border-top-left-radius:5px;
+             border-top-right-radius:5px;
+         }
+    }
+    .form-wrap{
+        padding: .5em .75em .5em 1em;
+        background: #062a47;
+        position: relative;
+        margin:0;
+        max-width:100%;
+        z-index: 10;
+
+		.sticky-contact{
+			.title{
+				color: #fff;
+			} 
+			.primary-btn{
+				width: 100%;
+				background: $brand-complimentary;
+			}
+		}
+    }
+}
+.sticky-form.slide{
+    right: inherit !important;
+    left: 100% !important;
+    margin-left: 6px;
+}
+
+/***** X OUT BUTTON FOR STICKY FORM *****/
+.form-wrap .title.close{
+	padding: 10px 15px !important;
+	border-radius: 0!important;
+	top: 0 !important;
+	right: 0 !important;
+	-webkit-transform: rotate(0deg) !important;
+	transform: rotate(0deg) !important;
+	opacity: 1 !important;
+}
+
+
+
+#multistep {
+	margin: 0 auto;
+	position: relative;
+	max-width: 800px;
+	height: 650px;
+	z-index: 10;
+
+	fieldset {
+		width: 100%;
+		border: 0 none;
+		border-radius: 3px;
+		box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+		padding: 20px 30px;
+	
+		/*stacking fieldsets above each other*/
+		position: absolute;
+
+		&:not(:first-of-type) {
+			display: none;
+		}
+		.form-top{
+			position: relative;
+
+			small{
+				position: absolute;
+				right:0;
+				bottom: 0;
+			}
+		}
+		.help-block.with-errors{
+			margin: 0;
+			padding: 0;
+
+			ul{
+				margin: 10px 0 0;
+				padding: 0;
+				line-height: 0;
+
+				li{
+					font-size: 12px;
+					color: #f00;
+				}
+			}
+		}
+	}
+}
+
+/*
+	CONTACT FORM 7
+/************************
+
+.page-id-6102{
+	form{
+		margin:20px 0px;
+		background-color: #062a47 !important;
+		padding: 40px 10px 0px 10px !important;
+		.wpcf7-form-control{
+			width: 500px;
+			padding: 15px !important;
+			@include transition( ease all .2s)
+			border-radius:10px;
+			font-size:20px;
+			margin: 10px 0px;
+			color: #000;
+			&:focus{
+				border: 2px solid #062a47;	
+			}			
+		}
+		.label{
+			font-family: $sans-serif;
+			font-weight: 400;
+			margin: 10px 0px;
+			color: #fff;
+			font-size: 20px;
+			span.wpcf7-form-control-wrap{
+				font-size: 13px !important;
+				color:#fae200 !important;	
+			}
+			span.wpcf7-not-valid-tip{
+				display: block !important;	
+			}					
+		}
+		.ins{
+			margin-top: 15px;
+			span.wpcf7-form-control-wrap.INS{
+				border: none !important;	
+			}		
+		}
+		.wpcf7-list-item-label,.wpcf7-list-item{
+			padding: 0px 15px;
+			font-size: 20px;
+			font-family: $serif;
+			color: #fff;
+			display: inline-block;	
+		}
+		.wpcf7-submit{
+			margin-top: 20px;
+			font-family: $sans-serif;
+			background-color: #062a47;
+			width: auto !important;
+			border: 2px solid #fae200;
+			color: #fae200;
+			padding: 5px 30px !important;
+			@include transition( ease all .4s)
+			&:hover{
+				color: #062a47;
+				background-color: #fae200;
+				border: 2px solid #062a47;	
+			}
+			.wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors{
+				color: #fff;	
+			}			 	
+		}
+		.wpcf7-response-output{
+			color: #fff;
+			font-size: 13px;	
+		}									
+	}
+}
+*/
+
+/* ONLINE APPLICATION 
+	*****************/
+.page-id-26236,.page-id-26323{	
+	.wpcf7-form{
+		padding: 40px !important;
+		.wpcf7-form-control-wrap{
+			padding: 0px !important;	
+		}	
+	}
+}			
+	
+.wpcf7-form{
+	margin:20px 0px;
+	background-color: #e3e3e3 !important;
+	padding: 10px 40px 40px 40px !important;
+	border-radius: 25px;
+	box-shadow: 3px 3px 3px #dadada !important;
+	.wpcf7-form-control-wrap{
+		padding: 20px 1px;	
+	}		
+	.wpcf7-form-control{
+		@include transition( ease all .2s)
+	    background: #fff;
+	    border: 2px solid rgba(6,42,71,.95);
+	    border-radius: 3px;
+	    color: rgba(0,0,0,.87);
+	    display: block;
+	    font-family: Gotham SSm A,Gotham SSm B,Gotham Bold,sans-serif;
+	    font-weight: 500;
+	    font-size: 16px;
+	    height: 48px;
+	    padding: 10px 15px;
+	    width: 100%;
+		&:focus{
+			border: 2px solid #062a47;	
+		}			
+	}
+	.wpcf7-submit{
+		margin-top: 20px;
+		font-family: $sans-serif;
+		background-color: #062a47;
+		width: auto !important;
+		border: 2px solid #fae200;
+		color: #fae200;
+		padding: 5px 30px !important;
+		@include transition( ease all .4s)
+		&:hover{
+			color: #062a47;
+			background-color: #fae200;
+			border: 2px solid #062a47;	
+		}
+		.wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors{
+			color: #fff;	
+		}			 	
+	}
+	.wpcf7-response-output{
+		color: #062a47;
+		font-size: 13px;	
+	}
+	.label{
+		font-family: $sans-serif;
+		font-weight: 400;
+		margin: 10px 0px;
+		color: #062a47;
+		font-size: 20px;
+	}
+	.wpcf7-list-item-label,.wpcf7-list-item{
+		padding-right: 15px;
+		font-size: 16px;
+		font-family: $serif;
+		color: #062a47 !important;
+		display: inline-block !important;	
+	}
+	.wpcf7-radio{
+		background: #e3e3e3 !important;
+		border: none !important;
+		display: inline-block !important;
+		padding: 0px;	
+	}
+	.INStype,.INS{
+		padding:0px;
+			
+	}										
+}		
+	
+
+@media screen and (max-width:1200px){
+		
+}	
+
+@media screen and (max-width:992px){
+
+
+    .sticky-footer-nav{
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        z-index: 999;
+        background: #ffa700;
+        border-bottom: 3px solid #062a47;
+
+        a.sticky-foot-btn{
+            display: block;
+            color: #fff;
+            height: 41px;
+            line-height: 41px;
+            font-size: 20px;
+        }
+    }
+}
+@media screen and (max-width:767px){
+	
+
+}
+
+@media screen and (max-width:480px){
+	
+			
+}	

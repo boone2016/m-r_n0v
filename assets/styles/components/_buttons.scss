@@ -1,0 +1,141 @@
+.med-blue-btn,
+.med-yellow-btn{
+	display: inline-block;
+	padding:11px 15px;
+	text-transform: uppercase;
+	text-decoration: none !important;
+	font-size:1.6em;
+	font-family:$sans-serif;
+	font-style:$sans-serif-normal !important;
+	font-weight:$sans-serif-800;
+	white-space: nowrap;
+	@include transition( ease all .4s)
+}
+
+/* YELLOW BTN */
+.med-yellow-btn{
+	color: $brand-primary !important;
+	background: $brand-secondary;
+	border: 3px solid $brand-primary;
+}
+.med-yellow-btn:hover{
+	color: $brand-secondary !important;
+	background: $brand-primary;
+}
+.med-yellow-btn:focus{
+	border: 3px solid $brand-secondary;
+}
+
+/* BLUE BTN */
+.med-blue-btn, .sm-blue-btn{
+	color: $brand-secondary !important;
+	background: $brand-primary;
+	border: 3px solid $brand-secondary;
+}
+.med-blue-btn:hover, .sm-blue-btn:hover{
+	color: $brand-primary !important;
+	background: $brand-secondary;
+}
+.med-blue-btn:focus, .sm-blue-btn:focus{
+	border: 3px solid $brand-primary;
+}
+
+.med-yellow-btn {
+	font-size: 1.2em;
+	padding: 6px 10px;
+	}
+	
+.sm-blue-btn{
+	display: inline-block;
+	padding:3px 15px;
+	text-transform: uppercase;
+	text-decoration: none !important;
+	font-size:1em;
+	font-family:$sans-serif;
+	font-style:$sans-serif-normal !important;
+	font-weight:$sans-serif-800;
+	white-space: nowrap;
+	@include transition( ease all .4s)	
+}		
+	
+/** READ MORE BUTTON **/
+
+
+.read-more{
+	border: 2px solid #e3e3e3;
+	padding: 8px 30px;
+    font-size: 1.3em;
+    color:$brand-text-primary;
+    display:block;
+    margin: 0 auto;
+    text-align: center;	
+	max-width: 200px;
+	@include transition( ease all .4s);
+	&:hover{
+		background-color:#e3e3e3;
+		border: 2px solid #e3e3e3;
+		text-decoration: none;
+		@include transition( ease all .4s);
+	}
+	&:focus{
+		border: 2px solid #5a5a5a;
+		background-color:#cccccc;
+		text-decoration: none;
+		@include transition( ease all .4s);
+	}		
+}
+.row{	
+	.content{
+		.read-more{
+			font-family: $sans-serif !important;	
+		}	
+	}
+}
+
+/********* CONTACT FORM GRAVITY BUTTON *************/
+
+#gform_submit_button_2{
+	color:#fff;
+	color: $brand-secondary !important;
+	background: $brand-primary;
+	border: 3px solid $brand-secondary;
+	padding: 5px 30px;
+    font-size: 1.4em;
+    @include transition( ease all .4s);
+	&:hover{
+		color: $brand-primary !important;
+		background: $brand-secondary;
+		@include transition( ease all .4s);
+	}
+	&:focus{
+		border: 3px solid $brand-primary;
+		@include transition( ease all .4s);	
+	}			
+}
+
+
+	
+@media screen and (max-width:1240px){
+	
+	.med-blue-btn, .med-yellow-btn {
+	font-size: 1.2em;
+	padding: 6px 10px;
+	}
+	
+	
+}	
+	
+@media screen and (max-width:480px){
+	
+	.med-blue-btn, .med-yellow-btn {
+	font-size: 1.2em;
+	padding: 6px 10px;
+	}
+	
+	.read-more{
+		max-width: 100%;
+			
+	}	
+	
+	
+}
